@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+  <listeners>
+    <listener class-name="com.listners.TestListeners"/>
+    <listener class-name="com.listners.SetRetryListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="com.tests.LoginTest">
+        <methods>
+          <include name="testFailure"/>
+          <include name="verifyHeading3"/>
+          <include name="verifyRegisterLink"/>
+          <include name="setUp"/>
+          <include name="blankLogin"/>
+        </methods>
+      </class> <!-- com.tests.LoginTest -->
+      <class name="com.tests.UserTest">
+        <methods>
+          <include name="verifyuserTable"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tests.UserTest -->
+      <class name="com.tests.DashboardTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="lougoutButton"/>
+          <include name="verifyHeadings2"/>
+        </methods>
+      </class> <!-- com.tests.DashboardTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
